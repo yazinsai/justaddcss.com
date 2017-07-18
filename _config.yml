@@ -19,7 +19,7 @@ theme: minimal-mistakes-jekyll
 locale                   : "en"
 title                    : "Developer turned Designer"
 title_separator          : "-"
-name                     : "Yazin Alirhayim"
+name                     : "Just add CSS"
 description              : > # this means to ignore newlines until next key
   I'm a developer that's trying to learn how to design
   by learning one small design lesson, every single day.
