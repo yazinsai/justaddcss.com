@@ -71,9 +71,9 @@ Finally, let's add abit more CSS to make the thing look nice and polished:
   color: #fff;
   padding: 10px 20px;">Hi there!</button>
 
-Ah, that looks lovely! Giving it a bit of breathing space (using `padding`) and a border with the darker of the two shades looks great.
+Ah, that looks lovely! Giving it a bit of breathing space (using `padding`) and a border with the lighter of the two shades looks great.
 
-> When using a gradient, use the darker shade as the border
+> When using a gradient, use the lighter shade as the border
 
 Also, I changed the direction of the gradient so it looks like the light is coming from the top left. I remember reading something about that somewhere, and will make tomorrow's post about diving into lighting and shadows and all that goodness!
 
