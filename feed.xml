@@ -1,5 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://justaddcss.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://justaddcss.com/" rel="alternate" type="text/html" /><updated>2017-07-18T23:03:15+03:00</updated><id>https://justaddcss.com/</id><title type="html">Developer turned Designer</title><subtitle>I'm a developer that's trying to learn how to design by learning one small design lesson, every single day.
-</subtitle><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><entry><title type="html">Hello</title><link href="https://justaddcss.com/hello/" rel="alternate" type="text/html" title="Hello" /><published>2017-07-18T00:00:00+03:00</published><updated>2017-07-18T00:00:00+03:00</updated><id>https://justaddcss.com/hello</id><content type="html" xml:base="https://justaddcss.com/hello/">&lt;p&gt;Hello there! My name’s Yazin, and I’m a developer. I’ve always wanted to get better at designing things, but could never really get around to it.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://justaddcss.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://justaddcss.com/" rel="alternate" type="text/html" /><updated>2017-07-19T20:50:52+03:00</updated><id>https://justaddcss.com/</id><title type="html">Developer turned Designer</title><subtitle>I'm a developer that's trying to learn how to design by learning one small design lesson, every single day.
+</subtitle><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><entry><title type="html">Day 1 Gradients</title><link href="https://justaddcss.com/day-1-gradients/" rel="alternate" type="text/html" title="Day 1 Gradients" /><published>2017-07-19T00:00:00+03:00</published><updated>2017-07-19T00:00:00+03:00</updated><id>https://justaddcss.com/day-1-gradients</id><content type="html" xml:base="https://justaddcss.com/day-1-gradients/">&lt;p&gt;Ok, so I’m pretty familiar with how to make a button:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;background: #cfcfcf;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Preview:
+&lt;button style=&quot;background: #cfcfcf;&quot;&gt;Hi there!&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;Ok, but that’s plain boring. Let’s add some juicy gradient goodness to the mix!&lt;/p&gt;
+
+&lt;h2 id=&quot;gradient-backgrounds&quot;&gt;Gradient backgrounds&lt;/h2&gt;
+
+&lt;p&gt;Gradients are most often used with the &lt;code class=&quot;highlighter-rouge&quot;&gt;background&lt;/code&gt; CSS property, and there are two types:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linear Gradient&lt;/li&gt;
+  &lt;li&gt;Radial Gradient (I’ll cover this later)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Linear gradient is the popular kid on the block, and it’s defined like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;linear-gradient&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;direction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color-stop1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color-stop2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ok, let’s try that on our button:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;background: linear-gradient(to bottom, red, blue);&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button style=&quot;background: linear-gradient(to bottom, red, blue);&quot;&gt;Hi there!&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;Ah, that’s looking better.&lt;/p&gt;
+
+&lt;p&gt;I mean, sorta. It still looks horrendous (when you consider the actual colors). I think having subtle gradients would work better, I found a website that showcases some good looking gradients &lt;a href=&quot;https://uigradients.com/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s take one example … &lt;a href=&quot;https://uigradients.com/#OrangeFun&quot;&gt;OrangeFun&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;
+  background: linear-gradient(to bottom, #fc4a1a, #f7b733);&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button style=&quot;background: linear-gradient(to bottom, #fc4a1a, #f7b733);&quot;&gt;Hi there!&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh, that looks sweet — but &lt;em&gt;why&lt;/em&gt;? What’s the right amount of “distance” between colors so it turns out OK? I plugged the two colors into Photoshop to see how they differed:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gradient-picking-one.png&quot; alt=&quot;Picking a gradient&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmm, it seems that the primary difference is in that H value (“Hue”), with a difference of about ~30°. Nice. That’s probably a good benchmark to consider when picking colors for a gradient combo.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lesson: Vary Hue (up to 30°) to get a good color combo for a gradient.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Finally, let’s add abit more CSS to make the thing look nice and polished:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+  border: 1px solid #f7b733;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 20px;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;button style=&quot;   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #f7b733;   border-radius: 3px;   color: #fff;   padding: 10px 20px;&quot;&gt;Hi there!&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;Ah, that looks lovely! Giving it a bit of breathing space (using &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;) and a border with the darker of the two shades looks great.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;When using a gradient, use the darker shade as the border&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Also, I changed the direction of the gradient so it looks like the light is coming from the top left. I remember reading something about that somewhere, and will make tomorrow’s post about diving into lighting and shadows and all that goodness!&lt;/p&gt;
+
+&lt;p&gt;Stay tuned.&lt;/p&gt;
+
+&lt;p&gt;Next…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Radial gradients&lt;/li&gt;
+  &lt;li&gt;Lighting, shadows&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><summary type="html">Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!</summary></entry><entry><title type="html">Hello</title><link href="https://justaddcss.com/hello/" rel="alternate" type="text/html" title="Hello" /><published>2017-07-18T00:00:00+03:00</published><updated>2017-07-18T00:00:00+03:00</updated><id>https://justaddcss.com/hello</id><content type="html" xml:base="https://justaddcss.com/hello/">&lt;p&gt;Hello there! My name’s Yazin, and I’m a developer. I’ve always wanted to get better at designing things, but could never really get around to it.&lt;/p&gt;
 
 &lt;p&gt;So here’s my attempt at doing that — in baby steps!&lt;/p&gt;
 
@@ -7,4 +87,4 @@
 
 &lt;p&gt;I know a few things, but this’ll help me practice — and hopefully, reach an adequate level before too long.&lt;/p&gt;
 
-&lt;p&gt;Let’s get started!&lt;/p&gt;</content><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><summary type="html">Hello there! My name’s Yazin, and I’m a developer. I’ve always wanted to get better at designing things, but could never really get around to it.</summary></entry></feed>
+&lt;p&gt;Let’s get started!&lt;/p&gt;</content><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><summary type="html">Introduction to the website, and what I aim to do. Baby steps $FTW!</summary></entry></feed>
