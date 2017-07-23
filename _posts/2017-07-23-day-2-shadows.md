@@ -53,3 +53,74 @@ Not bad for such an early try!
 
 Turns out, you can also set the `box-shadow` property multiple times to the same element (e.g. adding an `inset` shadow, and a regular one).
 
+{% comment %}
+See also:
+https://codepen.io/haibnu/pen/FxGsI
+{% endcomment %}
+
+## Back to buttons
+
+In [the previous post]({% post_url 2017-07-19-day-1-gradients %}), we ended up with a button:
+
+<button style="
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+  border: 1px solid #f7b733;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 20px;">Hi there!</button>
+
+&hellip; and wanted to add a shadow to it so it looks more realistic. We spoke briefly about lighting and how having a fixed light point on the page can help you decide how the gradients and shadows should look like.
+
+Now, we'll try and put that to practice.
+
+If we assume that the light source is in the top-left corner of the page, what should the shadow look like? My intuition is:
+
+- It'll be below the button (as opposed to above it 😅)
+- and slightly to the right so `h_position > 0`
+- with the shadow slightly larger than the button itself so `spread > 0`
+- no idea what blur should look like, so i'll try a bunch of stuff here
+
+### First attempt
+
+```html
+<button style="
+	box-shadow: 3px 2px 3px 2px rgba(0,0,0,.4);
+	...
+```
+
+<button style="
+	box-shadow: 3px 2px 3px 2px rgba(0,0,0,.4);
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+  border: 1px solid #f7b733;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 20px;">Hi there!</button>
+
+That looks way too forced. It's screaming newbie! Let's
+
+- soften the shadow (more blur, lower spread)
+- change the border to be slightly darker than the button
+
+### Second attempt
+
+```html
+<button style="
+	box-shadow: 2px 2px 4px 1px rgba(0,0,0,.4);
+	...
+```
+
+<button style="
+	box-shadow: 2px 2px 4px 1px rgba(0,0,0,.4);
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+  border: 1px solid #fc4a1a;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 20px;">Hi there!</button>
+
+Better, but still looks &hellip; off.
+
+I did some searching and [found](https://www.smashingmagazine.com/2017/02/shadows-blur-effects-user-interface-design/) this excellent image that sums up how elevation affects the shadow of an object (in terms of size and blur):
+
+![Shadows](/assets/object-elevation-shadow-opt.gif)
+
+
