@@ -263,7 +263,7 @@
 
 
 
-  1 minute read
+  2 minute read
 </p>
           
         </header>
@@ -321,6 +321,58 @@
 <p>Not bad for such an early try!</p>
 
 <p>Turns out, you can also set the <code class="highlighter-rouge">box-shadow</code> property multiple times to the same element (e.g. adding an <code class="highlighter-rouge">inset</code> shadow, and a regular one).</p>
+
+<h2 id="back-to-buttons">Back to buttons</h2>
+
+<p>In <a href="/day-1-gradients/">the previous post</a>, we ended up with a button:</p>
+
+<p><button style="   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #f7b733;   border-radius: 3px;   color: #fff;   padding: 10px 20px;">Hi there!</button></p>
+
+<p>… and wanted to add a shadow to it so it looks more realistic. We spoke briefly about lighting and how having a fixed light point on the page can help you decide how the gradients and shadows should look like.</p>
+
+<p>Now, we’ll try and put that to practice.</p>
+
+<p>If we assume that the light source is in the top-left corner of the page, what should the shadow look like? My intuition is:</p>
+
+<ul>
+  <li>It’ll be below the button (as opposed to above it 😅)</li>
+  <li>and slightly to the right so <code class="highlighter-rouge">h_position &gt; 0</code></li>
+  <li>with the shadow slightly larger than the button itself so <code class="highlighter-rouge">spread &gt; 0</code></li>
+  <li>no idea what blur should look like, so i’ll try a bunch of stuff here</li>
+</ul>
+
+<h3 id="first-attempt">First attempt</h3>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"
+	box-shadow: 3px 2px 3px 2px rgba(0,0,0,.4);
+	...
+</span></code></pre>
+</div>
+
+<p><button style=" 	box-shadow: 3px 2px 3px 2px rgba(0,0,0,.4);   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #f7b733;   border-radius: 3px;   color: #fff;   padding: 10px 20px;">Hi there!</button></p>
+
+<p>That looks way too forced. It’s screaming newbie! Let’s</p>
+
+<ul>
+  <li>soften the shadow (more blur, lower spread)</li>
+  <li>change the border to be slightly darker than the button</li>
+</ul>
+
+<h3 id="second-attempt">Second attempt</h3>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"
+	box-shadow: 2px 2px 4px 1px rgba(0,0,0,.4);
+	...
+</span></code></pre>
+</div>
+
+<p><button style=" 	box-shadow: 2px 2px 4px 1px rgba(0,0,0,.4);   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #fc4a1a;   border-radius: 3px;   color: #fff;   padding: 10px 20px;">Hi there!</button></p>
+
+<p>Better, but still looks … off.</p>
+
+<p>I did some searching and <a href="https://www.smashingmagazine.com/2017/02/shadows-blur-effects-user-interface-design/">found</a> this excellent image that sums up how elevation affects the shadow of an object (in terms of size and blur):</p>
+
+<p><img src="/assets/object-elevation-shadow-opt.gif" alt="Shadows" /></p>
 
 
         
