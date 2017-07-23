@@ -19,12 +19,12 @@
 
 
 
-<title>Day 1 Gradients - Developer turned Designer</title>
+<title>Day 2 Shadows - Developer turned Designer</title>
 
 
 
 
-<meta name="description" content="Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!">
+<meta name="description" content="Today, we look at shadows and page lighting. You know how some shadows look amazing and others just look forced. Hopefully, we’ll figure out how to make the former.">
 
 
 
@@ -33,15 +33,15 @@
 
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="Developer turned Designer">
-<meta property="og:title" content="Day 1 Gradients">
+<meta property="og:title" content="Day 2 Shadows">
 
 
-  <link rel="canonical" href="https://justaddcss.com/day-1-gradients/">
-  <meta property="og:url" content="https://justaddcss.com/day-1-gradients/">
+  <link rel="canonical" href="https://justaddcss.com/day-2-shadows/">
+  <meta property="og:url" content="https://justaddcss.com/day-2-shadows/">
 
 
 
-  <meta property="og:description" content="Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!">
+  <meta property="og:description" content="Today, we look at shadows and page lighting. You know how some shadows look amazing and others just look forced. Hopefully, we’ll figure out how to make the former.">
 
 
 
@@ -56,7 +56,7 @@
 
 
   <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2017-07-19T00:00:00+03:00">
+  <meta property="article:published_time" content="2017-07-23T00:00:00+03:00">
 
 
 
@@ -247,15 +247,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Day 1 Gradients">
-    <meta itemprop="description" content="Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!">
-    <meta itemprop="datePublished" content="July 19, 2017">
+    <meta itemprop="headline" content="Day 2 Shadows">
+    <meta itemprop="description" content="Today, we look at shadows and page lighting. You know how some shadows look amazing and others just look forced. Hopefully, we’ll figure out how to make the former.">
+    <meta itemprop="datePublished" content="July 23, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Day 1 Gradients
+          <h1 class="page__title" itemprop="headline">Day 2 Shadows
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
@@ -270,87 +270,58 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>Ok, so I’m pretty familiar with how to make a button:</p>
+        <p>Ok, so first let’s talk about the CSS <code class="highlighter-rouge">box-shadow</code> property that we’ll be using:</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"background: #cfcfcf;"</span><span class="nt">&gt;</span>Hi there!<span class="nt">&lt;/button&gt;</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">box-shadow</span><span class="o">:</span> <span class="nt">none</span><span class="o">|</span><span class="nt">h-shadow</span> <span class="nt">v-shadow</span> <span class="nt">blur</span> <span class="nt">spread</span> <span class="nt">color</span> <span class="o">|</span><span class="nt">inset</span><span class="o">|</span><span class="nt">initial</span><span class="o">|</span><span class="nt">inherit</span><span class="o">;</span>
 </code></pre>
 </div>
-<p>Preview:
-<button style="background: #cfcfcf;">Hi there!</button></p>
-
-<p>Ok, but that’s plain boring. Let’s add some juicy gradient goodness to the mix!</p>
-
-<h2 id="gradient-backgrounds">Gradient backgrounds</h2>
-
-<p>Gradients are most often used with the <code class="highlighter-rouge">background</code> CSS property, and there are two types:</p>
 
 <ul>
-  <li>Linear Gradient</li>
-  <li>Radial Gradient (I’ll cover this later)</li>
+  <li><code class="highlighter-rouge">h-shadow</code> and <code class="highlighter-rouge">v-shadow</code> are the positions of the horizontal and vertical shadows, respectively. They are in distance units (e.g. <code class="highlighter-rouge">px</code>).</li>
+  <li><code class="highlighter-rouge">blur</code> is the blur distance. Larger values mean the shadow is more, well, blurred.</li>
+  <li><code class="highlighter-rouge">spread</code> is the size of the shadow (with negative values allowed). It’s like the thickness of the shadow outline of the object. A negative value would mean that the shadow is <em>smaller</em> than the object.</li>
+  <li>No points for guessing what <code class="highlighter-rouge">color</code> is.</li>
+  <li><code class="highlighter-rouge">inset</code> changes the shadow from an outer shadow (outset) to an inner shadow, if set.</li>
 </ul>
 
-<p>Linear gradient is the popular kid on the block, and it’s defined like so:</p>
+<p>As far as color goes, using a semi-transparent option seems to be the popular option — and most readily simulates real shadows: <code class="highlighter-rouge">rgba(0, 0, 0, 0.4)</code>.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">background</span><span class="o">:</span> <span class="nt">linear-gradient</span><span class="o">(</span><span class="nt">direction</span><span class="o">,</span> <span class="nt">color-stop1</span><span class="o">,</span> <span class="nt">color-stop2</span><span class="o">,</span> <span class="o">...);</span>
+<p>Let’s mess around with it abit:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"
+  box-shadow: 10px 5px 2px 3px rgba(0, 0, 0, .4); 
+  width: 100px; height: 100px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </code></pre>
 </div>
+<div style="box-shadow: 10px 5px 2px 3px rgba(0, 0, 0, .4); width: 100px; height: 100px; margin-bottom: 20px;"></div>
 
-<p>Ok, let’s try that on our button:</p>
+<p>Ok, so if I wanted to create an effect like the one in the image below:</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"background: linear-gradient(to bottom, red, blue);"</span><span class="nt">&gt;</span>Hi there!<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-</div>
-<p><button style="background: linear-gradient(to bottom, red, blue);">Hi there!</button></p>
+<p><img src="/assets/shadow-recess-middle.png" /></p>
 
-<p>Ah, that’s looking better.</p>
+<p>… I know that:</p>
 
-<p>I mean, sorta. It still looks horrendous (when you consider the actual colors). I think having subtle gradients would work better, I found a website that showcases some good looking gradients <a href="https://uigradients.com/">here</a>.</p>
-
-<p>Let’s take one example … <a href="https://uigradients.com/#OrangeFun">OrangeFun</a>:</p>
-
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"
-  background: linear-gradient(to bottom, #fc4a1a, #f7b733);"</span><span class="nt">&gt;</span>Hi there!<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-</div>
-<p><button style="background: linear-gradient(to bottom, #fc4a1a, #f7b733);">Hi there!</button></p>
-
-<p>Oh, that looks sweet — but <em>why</em>? What’s the right amount of “distance” between colors so it turns out OK? I plugged the two colors into Photoshop to see how they differed:</p>
-
-<p><img src="/assets/gradient-picking-one.png" alt="Picking a gradient" /></p>
-
-<p>Hmm, it seems that the primary difference is in that H value (“Hue”), with a difference of about ~30°. Nice. That’s probably a good benchmark to consider when picking colors for a gradient combo.</p>
-
-<blockquote>
-  <p>Lesson: Vary Hue (up to 30°) to get a good color combo for a gradient.</p>
-</blockquote>
-
-<p>Finally, let’s add abit more CSS to make the thing look nice and polished:</p>
-
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"
-  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
-  border: 1px solid #f7b733;
-  border-radius: 3px;
-  color: #fff;
-  padding: 10px 20px;"</span><span class="nt">&gt;</span>Hi there!<span class="nt">&lt;/button&gt;</span>
-</code></pre>
-</div>
-<p><button style="   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #f7b733;   border-radius: 3px;   color: #fff;   padding: 10px 20px;">Hi there!</button></p>
-
-<p>Ah, that looks lovely! Giving it a bit of breathing space (using <code class="highlighter-rouge">padding</code>) and a border with the lighter of the two shades looks great.</p>
-
-<blockquote>
-  <p>When using a gradient, use the lighter shade as the border</p>
-</blockquote>
-
-<p>Also, I changed the direction of the gradient so it looks like the light is coming from the top left. I remember reading something about that somewhere, and will make tomorrow’s post about diving into lighting and shadows and all that goodness!</p>
-
-<p>Stay tuned.</p>
-
-<p>Next…</p>
 <ul>
-  <li>Radial gradients</li>
-  <li>Lighting, shadows</li>
+  <li>The shadow has to be smaller than the object … so <code class="highlighter-rouge">spread &lt; 0</code></li>
+  <li>The shadow is centered, so the horizontal distance from the center of the object <code class="highlighter-rouge">h_distance = 0px</code></li>
+  <li>Since the negative <code class="highlighter-rouge">spread</code> will cause the vertical distance to reduce to the center, we’ll need to offset it by the same amount or slightly more (so it pokes out). That means <code class="highlighter-rouge">v_distance &gt;= spread</code></li>
 </ul>
+
+<p>Which makes:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"
+  box-shadow: 0px 7px 5px -5px rgba(0,0,0,.4);
+  width: 100px; height: 100px; background: #f7f7ca;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre>
+</div>
+<div style="
+  box-shadow: 0px 7px 5px -5px rgba(0,0,0,.4);
+  width: 100px; height: 100px; background: #f7f7ca; margin-bottom: 20px;"></div>
+
+<p>Not bad for such an early try!</p>
+
+<p>Turns out, you can also set the <code class="highlighter-rouge">box-shadow</code> property multiple times to the same element (e.g. adding an <code class="highlighter-rouge">inset</code> shadow, and a regular one).</p>
+
 
         
       </section>
@@ -361,7 +332,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-19T00:00:00+03:00">July 19, 2017</time></p>
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-07-23T00:00:00+03:00">July 23, 2017</time></p>
         
       </footer>
 
@@ -370,25 +341,24 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Day 1 Gradients https://justaddcss.com/day-1-gradients/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Day 2 Shadows https://justaddcss.com/day-2-shadows/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https://justaddcss.com/day-1-gradients/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://justaddcss.com/day-2-shadows/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=https://justaddcss.com/day-1-gradients/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=https://justaddcss.com/day-2-shadows/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://justaddcss.com/day-1-gradients/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://justaddcss.com/day-2-shadows/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="https://justaddcss.com/hello/" class="pagination--pager" title="Hello
+      <a href="https://justaddcss.com/day-1-gradients/" class="pagination--pager" title="Day 1 Gradients
 ">Previous</a>
     
     
-      <a href="https://justaddcss.com/day-2-shadows/" class="pagination--pager" title="Day 2 Shadows
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -412,7 +382,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="https://justaddcss.com/day-2-shadows/" rel="permalink">Day 2 Shadows
+        <a href="https://justaddcss.com/day-1-gradients/" rel="permalink">Day 1 Gradients
 </a>
       
     </h2>
@@ -425,7 +395,8 @@
   1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Today, we look at shadows and page lighting. You know how some shadows look amazing and others just look forced. Hopefully, we’ll figure out how to make the ...</p>
+    <p class="archive__item-excerpt" itemprop="description">Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!
+</p>
   </article>
 </div>
         

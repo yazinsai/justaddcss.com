@@ -1,5 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://justaddcss.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://justaddcss.com/" rel="alternate" type="text/html" /><updated>2017-07-19T20:54:34+03:00</updated><id>https://justaddcss.com/</id><title type="html">Developer turned Designer</title><subtitle>I'm a developer that's trying to learn how to design by learning one small design lesson, every single day.
-</subtitle><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><entry><title type="html">Day 1 Gradients</title><link href="https://justaddcss.com/day-1-gradients/" rel="alternate" type="text/html" title="Day 1 Gradients" /><published>2017-07-19T00:00:00+03:00</published><updated>2017-07-19T00:00:00+03:00</updated><id>https://justaddcss.com/day-1-gradients</id><content type="html" xml:base="https://justaddcss.com/day-1-gradients/">&lt;p&gt;Ok, so I’m pretty familiar with how to make a button:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://justaddcss.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://justaddcss.com/" rel="alternate" type="text/html" /><updated>2017-07-23T13:46:15+03:00</updated><id>https://justaddcss.com/</id><title type="html">Developer turned Designer</title><subtitle>I'm a developer that's trying to learn how to design by learning one small design lesson, every single day.
+</subtitle><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><entry><title type="html">Day 2 Shadows</title><link href="https://justaddcss.com/day-2-shadows/" rel="alternate" type="text/html" title="Day 2 Shadows" /><published>2017-07-23T00:00:00+03:00</published><updated>2017-07-23T00:00:00+03:00</updated><id>https://justaddcss.com/day-2-shadows</id><content type="html" xml:base="https://justaddcss.com/day-2-shadows/">&lt;p&gt;Ok, so first let’s talk about the CSS &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; property that we’ll be using:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;box-shadow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;h-shadow&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;v-shadow&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;blur&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;spread&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;inset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;initial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;inherit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;h-shadow&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;v-shadow&lt;/code&gt; are the positions of the horizontal and vertical shadows, respectively. They are in distance units (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;px&lt;/code&gt;).&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;blur&lt;/code&gt; is the blur distance. Larger values mean the shadow is more, well, blurred.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;spread&lt;/code&gt; is the size of the shadow (with negative values allowed). It’s like the thickness of the shadow outline of the object. A negative value would mean that the shadow is &lt;em&gt;smaller&lt;/em&gt; than the object.&lt;/li&gt;
+  &lt;li&gt;No points for guessing what &lt;code class=&quot;highlighter-rouge&quot;&gt;color&lt;/code&gt; is.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt; changes the shadow from an outer shadow (outset) to an inner shadow, if set.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As far as color goes, using a semi-transparent option seems to be the popular option — and most readily simulates real shadows: &lt;code class=&quot;highlighter-rouge&quot;&gt;rgba(0, 0, 0, 0.4)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Let’s mess around with it abit:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;
+  box-shadow: 10px 5px 2px 3px rgba(0, 0, 0, .4); 
+  width: 100px; height: 100px;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div style=&quot;box-shadow: 10px 5px 2px 3px rgba(0, 0, 0, .4); width: 100px; height: 100px; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Ok, so if I wanted to create an effect like the one in the image below:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/shadow-recess-middle.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;… I know that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The shadow has to be smaller than the object … so &lt;code class=&quot;highlighter-rouge&quot;&gt;spread &amp;lt; 0&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;The shadow is centered, so the horizontal distance from the center of the object &lt;code class=&quot;highlighter-rouge&quot;&gt;h_distance = 0px&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Since the negative &lt;code class=&quot;highlighter-rouge&quot;&gt;spread&lt;/code&gt; will cause the vertical distance to reduce to the center, we’ll need to offset it by the same amount or slightly more (so it pokes out). That means &lt;code class=&quot;highlighter-rouge&quot;&gt;v_distance &amp;gt;= spread&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Which makes:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;
+  box-shadow: 0px 7px 5px -5px rgba(0,0,0,.4);
+  width: 100px; height: 100px; background: #f7f7ca;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div style=&quot;
+  box-shadow: 0px 7px 5px -5px rgba(0,0,0,.4);
+  width: 100px; height: 100px; background: #f7f7ca; margin-bottom: 20px;&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Not bad for such an early try!&lt;/p&gt;
+
+&lt;p&gt;Turns out, you can also set the &lt;code class=&quot;highlighter-rouge&quot;&gt;box-shadow&lt;/code&gt; property multiple times to the same element (e.g. adding an &lt;code class=&quot;highlighter-rouge&quot;&gt;inset&lt;/code&gt; shadow, and a regular one).&lt;/p&gt;</content><author><name>Yazin Alirhayim</name><email>hi@justaddcss.com</email></author><summary type="html">Today, we look at shadows and page lighting. You know how some shadows look amazing and others just look forced. Hopefully, we'll figure out how to make the former.</summary></entry><entry><title type="html">Day 1 Gradients</title><link href="https://justaddcss.com/day-1-gradients/" rel="alternate" type="text/html" title="Day 1 Gradients" /><published>2017-07-19T00:00:00+03:00</published><updated>2017-07-19T00:00:00+03:00</updated><id>https://justaddcss.com/day-1-gradients</id><content type="html" xml:base="https://justaddcss.com/day-1-gradients/">&lt;p&gt;Ok, so I’m pretty familiar with how to make a button:&lt;/p&gt;
 
 &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;background: #cfcfcf;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hi there!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
