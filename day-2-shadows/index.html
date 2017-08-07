@@ -263,7 +263,7 @@
 
 
 
-  2 minute read
+  3 minute read
 </p>
           
         </header>
@@ -368,12 +368,32 @@
 
 <p><button style=" 	box-shadow: 2px 2px 4px 1px rgba(0,0,0,.4);   background: linear-gradient(to bottom right, #f7b733, #fc4a1a);   border: 1px solid #fc4a1a;   border-radius: 3px;   color: #fff;   padding: 10px 20px;">Hi there!</button></p>
 
-<p>Better, but still looks … off.</p>
+<p>Better, but still looks … off. I think it might help to add an inset shadow in there as well. While we’re at it, let’s also fix the border — it looks too strong. Let’s give it a shot:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">style=</span><span class="s">"
+  box-shadow: 2px 2px 4px 1px rgba(90,90,90,.4), 
+              inset 0 0 5px 1px rgba(255,255,255,.1);
+  background: linear-gradient(to bottom right, #f7b733, #fc4a1a);
+  border: 1px solid rgba(252,74,26,.6);
+  border-radius: 3px;color: #fff;padding: 10px 20px;"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p><button style="box-shadow: 2px 2px 4px 1px rgba(90,90,90,.4), inset 0 0 5px 1px rgba(255,255,255,.1);background: linear-gradient(to bottom right, #f7b733, #fc4a1a);border: 1px solid rgba(252,74,26,.6);border-radius: 3px;color: #fff;padding: 10px 20px;">Hi there!</button></p>
+
+<p>Yup, that looks nicer still!</p>
 
 <p>I did some searching and <a href="https://www.smashingmagazine.com/2017/02/shadows-blur-effects-user-interface-design/">found</a> this excellent image that sums up how elevation affects the shadow of an object (in terms of size and blur):</p>
 
 <p><img src="/assets/object-elevation-shadow-opt.gif" alt="Shadows" /></p>
 
+<p>That’s it for now! I’ll dig into this more in future posts, but this is quite nice for such an early try :)</p>
+
+<p>Next…</p>
+
+<ul>
+  <li>Hover state shadows, etc</li>
+</ul>
 
         
       </section>
