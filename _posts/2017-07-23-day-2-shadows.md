@@ -1,8 +1,12 @@
 ---
+title: Day 2 Shadows
+date: 2017-07-23 00:00:00 +03:00
 layout: single
-excerpt: >
-  Today, we look at shadows and page lighting. You know how some shadows look amazing and others
-  just look forced. Hopefully, we'll figure out how to make the former.
+excerpt: 'Today, we look at shadows and page lighting. You know how some shadows look
+  amazing and others just look forced. Hopefully, we''ll figure out how to make the
+  former.
+
+'
 ---
 
 Ok, so first let's talk about the CSS `box-shadow` property that we'll be using:

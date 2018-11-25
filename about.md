@@ -1,6 +1,7 @@
 ---
-layout: single
 title: About
-permalink: /about/
+permalink: "/about/"
+layout: single
 ---
+
 Hi!

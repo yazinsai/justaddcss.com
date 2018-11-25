@@ -1,7 +1,11 @@
 ---
+title: Day 1 Gradients
+date: 2017-07-19 00:00:00 +03:00
 layout: single
-excerpt: >
-  Today, I practice gradients and try to figure out what makes a good gradient from an unsightly one!
+excerpt: 'Today, I practice gradients and try to figure out what makes a good gradient
+  from an unsightly one!
+
+'
 ---
 
 Ok, so I'm pretty familiar with how to make a button:
